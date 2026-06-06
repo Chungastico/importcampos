@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #BF1725;
+  --primary-alt: #BF1736;
+  --rose: #D98289;
+  --light: #F2F2F2;
+  --dark: #0D0D0D;
+  --background: #0D0D0D;
+  --foreground: #F2F2F2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-alt: var(--primary-alt);
+  --color-rose: var(--rose);
+  --color-light: var(--light);
+  --color-dark: var(--dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Before/After slider */
+.before-after-container {
+  position: relative;
+  overflow: hidden;
+  cursor: col-resize;
+  user-select: none;
+}
+
+.before-after-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #BF1725;
+  cursor: col-resize;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.before-after-handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background: #BF1725;
+  border-radius: 50%;
+  border: 3px solid #F2F2F2;
+}
+
+.before-after-handle::after {
+  content: '◀ ▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F2F2F2;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 11;
+  pointer-events: none;
+  white-space: nowrap;
 }
