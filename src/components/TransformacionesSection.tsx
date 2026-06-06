@@ -37,7 +37,7 @@ export default function TransformacionesSection() {
             Transformaciones
           </h2>
           <div className="w-16 h-1 bg-[#BF1725] mx-auto mt-6" />
-          <p className="text-[#F2F2F2]/50 mt-6 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-[#8C8C8C] mt-6 max-w-xl mx-auto text-sm leading-relaxed">
             Arrastra el divisor para comparar el estado inicial y el resultado final de cada vehículo.
           </p>
         </div>

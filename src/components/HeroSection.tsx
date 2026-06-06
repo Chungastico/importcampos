@@ -33,7 +33,7 @@ export default function HeroSection() {
           <span className="text-[#BF1725]">a perfecto.</span>
         </h1>
 
-        <p className="text-[#F2F2F2]/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="text-[#8C8C8C] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
           Importamos vehículos y los devolvemos a su mejor versión.
           Enderezado, pintura y reparación integral — visto en tiempo real.
         </p>

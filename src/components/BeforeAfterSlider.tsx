@@ -105,7 +105,7 @@ export default function BeforeAfterSlider({
       <div className="mt-4 px-1">
         <h3 className="text-[#F2F2F2] font-bold text-lg">{title}</h3>
         {description && (
-          <p className="text-[#F2F2F2]/50 text-sm mt-1">{description}</p>
+          <p className="text-[#8C8C8C] text-sm mt-1">{description}</p>
         )}
       </div>
     </div>

@@ -26,7 +26,7 @@
 |--------------------|-----------|----------------------------------|
 | `--primary`        | `#BF1725` | Rojo principal, CTAs, acentos    |
 | `--primary-alt`    | `#BF1736` | Hover states del rojo principal  |
-| `--rose`           | `#D98289` | Acentos suaves, detalles sutiles |
+| `--gray`           | `#8C8C8C` | Textos secundarios, bordes, iconos |
 | `--light`          | `#F2F2F2` | Fondo claro (sección servicios)  |
 | `--dark`           | `#0D0D0D` | Fondo oscuro principal           |
 

@@ -51,7 +51,7 @@ export default function ServiciosSection() {
               <h3 className="text-[#0D0D0D] font-black text-lg uppercase tracking-wide mb-3 group-hover:text-[#BF1725] transition-colors">
                 {s.title}
               </h3>
-              <p className="text-[#0D0D0D]/60 text-sm leading-relaxed">{s.description}</p>
+              <p className="text-[#8C8C8C] text-sm leading-relaxed">{s.description}</p>
             </div>
           ))}
         </div>
@@ -66,7 +66,7 @@ export default function ServiciosSection() {
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-4xl font-black text-[#BF1725]">{stat.value}</div>
-              <div className="text-[#0D0D0D]/60 text-sm mt-2 uppercase tracking-wide">{stat.label}</div>
+              <div className="text-[#8C8C8C] text-sm mt-2 uppercase tracking-wide">{stat.label}</div>
             </div>
           ))}
         </div>

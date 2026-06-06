@@ -16,7 +16,7 @@ export default function ContactoSection() {
         {/* Form */}
         <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col gap-2">
-            <label className="text-[#F2F2F2]/50 text-xs uppercase tracking-widest">Nombre</label>
+            <label className="text-[#8C8C8C] text-xs uppercase tracking-widest">Nombre</label>
             <input
               type="text"
               placeholder="Tu nombre"
@@ -25,7 +25,7 @@ export default function ContactoSection() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-[#F2F2F2]/50 text-xs uppercase tracking-widest">Teléfono / WhatsApp</label>
+            <label className="text-[#8C8C8C] text-xs uppercase tracking-widest">Teléfono / WhatsApp</label>
             <input
               type="tel"
               placeholder="+595 9XX XXX XXX"
@@ -34,7 +34,7 @@ export default function ContactoSection() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-[#F2F2F2]/50 text-xs uppercase tracking-widest">Servicio</label>
+            <label className="text-[#8C8C8C] text-xs uppercase tracking-widest">Servicio</label>
             <select className="bg-[#F2F2F2]/5 border border-[#F2F2F2]/10 rounded px-4 py-3 text-[#F2F2F2] focus:outline-none focus:border-[#BF1725] transition-colors appearance-none">
               <option value="" className="bg-[#0D0D0D]">Seleccionar...</option>
               <option value="importacion" className="bg-[#0D0D0D]">Importación de vehículo</option>
@@ -46,7 +46,7 @@ export default function ContactoSection() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-[#F2F2F2]/50 text-xs uppercase tracking-widest">Vehículo (Marca / Modelo / Año)</label>
+            <label className="text-[#8C8C8C] text-xs uppercase tracking-widest">Vehículo (Marca / Modelo / Año)</label>
             <input
               type="text"
               placeholder="Ej: Toyota Hilux 2020"
@@ -55,7 +55,7 @@ export default function ContactoSection() {
           </div>
 
           <div className="md:col-span-2 flex flex-col gap-2">
-            <label className="text-[#F2F2F2]/50 text-xs uppercase tracking-widest">Descripción del trabajo</label>
+            <label className="text-[#8C8C8C] text-xs uppercase tracking-widest">Descripción del trabajo</label>
             <textarea
               rows={4}
               placeholder="Describe el estado del vehículo o el trabajo requerido..."
@@ -82,7 +82,7 @@ export default function ContactoSection() {
           ].map((c) => (
             <div key={c.label}>
               <div className="text-2xl mb-2">{c.icon}</div>
-              <p className="text-[#F2F2F2]/40 text-xs uppercase tracking-widest mb-1">{c.label}</p>
+              <p className="text-[#8C8C8C] text-xs uppercase tracking-widest mb-1">{c.label}</p>
               <p className="text-[#F2F2F2] text-sm">{c.value}</p>
             </div>
           ))}
