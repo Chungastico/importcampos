@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
@@ -14,12 +15,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0D0D0D]/90 backdrop-blur border-b border-[#BF1725]/30">
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-[#BF1725] font-bold text-xl tracking-tight">
-            IMPORT<span className="text-[#F2F2F2]">CAMPOS</span>
-          </span>
+          <Image
+            src="/LogoImportcampos.svg"
+            alt="Importcampos Logo"
+            width={200}
+            height={40}
+            className="w-auto h-10"
+            priority
+          />
         </Link>
 
         {/* Desktop */}
@@ -28,7 +34,7 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className="text-sm text-[#F2F2F2]/70 hover:text-[#BF1725] transition-colors duration-200 uppercase tracking-wider"
+                className="text-sm text-gray-600 hover:text-[#BF1725] transition-colors duration-200 uppercase tracking-wider font-semibold"
               >
                 {label}
               </Link>
@@ -38,14 +44,14 @@ export default function Navbar() {
 
         <Link
           href="#contacto"
-          className="hidden md:inline-flex items-center px-5 py-2 bg-[#BF1725] text-[#F2F2F2] text-sm font-semibold uppercase tracking-wider rounded hover:bg-[#BF1736] transition-colors"
+          className="hidden md:inline-flex items-center px-6 py-2.5 bg-[#BF1725] text-white text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-[#a0131e] transition-colors shadow-sm"
         >
           Cotizar
         </Link>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-[#F2F2F2] p-2"
+          className="md:hidden text-gray-900 p-2"
           onClick={() => setOpen(!open)}
           aria-label="Menú"
         >
@@ -59,13 +65,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#0D0D0D] border-t border-[#BF1725]/20 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4 shadow-lg">
           {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className="text-[#F2F2F2]/70 hover:text-[#BF1725] transition-colors uppercase tracking-wider text-sm"
+              className="text-gray-600 hover:text-[#BF1725] transition-colors uppercase tracking-wider text-sm font-semibold py-2"
             >
               {label}
             </Link>
@@ -73,7 +79,7 @@ export default function Navbar() {
           <Link
             href="#contacto"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center justify-center px-5 py-2 bg-[#BF1725] text-[#F2F2F2] text-sm font-semibold uppercase tracking-wider rounded"
+            className="inline-flex items-center justify-center px-5 py-3 bg-[#BF1725] text-white text-sm font-bold uppercase tracking-wider rounded-sm mt-2"
           >
             Cotizar
           </Link>

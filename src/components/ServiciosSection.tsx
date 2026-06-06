@@ -27,14 +27,14 @@ const servicios = [
 
 export default function ServiciosSection() {
   return (
-    <section id="servicios" className="py-24 px-6 bg-[#F2F2F2]">
+    <section id="servicios" className="py-24 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-[#BF1725] text-sm font-semibold uppercase tracking-[0.3em] mb-4">
             Lo que hacemos
           </p>
-          <h2 className="text-4xl md:text-5xl font-black uppercase text-[#0D0D0D] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-black uppercase text-gray-900 leading-tight">
             Servicios
           </h2>
           <div className="w-16 h-1 bg-[#BF1725] mx-auto mt-6" />
@@ -45,19 +45,19 @@ export default function ServiciosSection() {
           {servicios.map((s) => (
             <div
               key={s.title}
-              className="group bg-white rounded-lg p-8 border border-[#0D0D0D]/10 hover:border-[#BF1725] transition-colors duration-300 hover:shadow-lg"
+              className="group bg-white rounded-lg p-8 border border-gray-200 hover:border-[#BF1725] transition-all duration-300 hover:shadow-lg"
             >
               <div className="text-4xl mb-6">{s.icon}</div>
-              <h3 className="text-[#0D0D0D] font-black text-lg uppercase tracking-wide mb-3 group-hover:text-[#BF1725] transition-colors">
+              <h3 className="text-gray-900 font-black text-lg uppercase tracking-wide mb-3 group-hover:text-[#BF1725] transition-colors">
                 {s.title}
               </h3>
-              <p className="text-[#8C8C8C] text-sm leading-relaxed">{s.description}</p>
+              <p className="text-gray-500 text-sm leading-relaxed">{s.description}</p>
             </div>
           ))}
         </div>
 
         {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-[#0D0D0D]/10 pt-16">
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-200 pt-16">
           {[
             { value: "200+", label: "Vehículos importados" },
             { value: "500+", label: "Reparaciones realizadas" },
@@ -66,7 +66,7 @@ export default function ServiciosSection() {
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-4xl font-black text-[#BF1725]">{stat.value}</div>
-              <div className="text-[#8C8C8C] text-sm mt-2 uppercase tracking-wide">{stat.label}</div>
+              <div className="text-gray-500 text-sm font-bold mt-2 uppercase tracking-wide">{stat.label}</div>
             </div>
           ))}
         </div>
