@@ -45,57 +45,74 @@ export default function HeroSection() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="relative h-screen w-full flex flex-col justify-center overflow-hidden bg-gray-50">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0 bg-image">
-        <Image
-          src="/hero-nissan.png"
-          alt="Premium Restored Nissan Murano"
-          fill
-          className="object-cover object-center opacity-80"
-          priority
-        />
-        {/* Gradient overlays for depth in a light theme */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-gray-50/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-50 via-gray-50/70 to-transparent" />
-      </div>
+    <section
+      ref={container}
+      className="relative min-h-screen w-full flex items-center overflow-hidden bg-[#F2F2F2]"
+    >
+      {/* Subtle red accent top-left */}
+      <div className="absolute top-0 left-0 w-1 h-full bg-[#BF1725]" />
 
-      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-24">
-        <div className="max-w-4xl">
-          <div className="overflow-hidden mb-6 flex items-center gap-4">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-32 lg:py-0">
+
+        {/* — LEFT: text — */}
+        <div>
+          <div className="mb-6 flex items-center gap-4">
             <div className="reveal-line h-px w-12 bg-[#BF1725] origin-left" />
             <span className="reveal-text text-[#BF1725] text-xs md:text-sm font-bold uppercase tracking-[0.4em]">
               El arte de la restauración
             </span>
           </div>
-          
-          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black uppercase leading-[0.85] tracking-tighter mb-8 text-gray-900">
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-[0.9] tracking-tighter mb-8 text-[#0D0D0D]">
             <div className="overflow-hidden pb-2">
               <span className="reveal-text inline-block">De Cero</span>
             </div>
-            <div className="overflow-hidden text-transparent bg-clip-text bg-gradient-to-r from-[#BF1725] to-[#ff3b4b] pb-2">
+            <div className="overflow-hidden text-[#BF1725] pb-2">
               <span className="reveal-text inline-block">a Perfecto.</span>
             </div>
           </h1>
 
           <div className="overflow-hidden mb-12">
-            <p className="reveal-text text-gray-600 text-lg md:text-2xl max-w-2xl leading-relaxed font-light">
-              Importamos y transformamos vehículos destrozados en obras maestras absolutas. 
-              <br className="hidden md:block" /> Vive la evolución en tiempo real.
+            <p className="reveal-text text-[#8C8C8C] text-lg md:text-xl max-w-lg leading-relaxed font-light">
+              Importamos y transformamos vehículos destrozados en obras maestras absolutas.
+              Vive la evolución en tiempo real.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6">
-            <a href="#transformaciones" className="reveal-btn group relative px-10 py-5 bg-[#BF1725] text-white font-bold uppercase tracking-widest text-sm overflow-hidden rounded-sm transition-all hover:shadow-[0_0_40px_rgba(191,23,37,0.3)]">
-              <span className="relative z-10 group-hover:text-white transition-colors duration-300">Descubrir Magia</span>
-              <div className="absolute inset-0 h-full w-0 bg-white/20 transition-all duration-300 ease-out group-hover:w-full z-0"></div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#transformaciones"
+              className="reveal-btn group relative px-10 py-4 bg-[#BF1725] text-white font-bold uppercase tracking-widest text-sm overflow-hidden rounded-sm transition-all hover:shadow-[0_8px_30px_rgba(191,23,37,0.35)]"
+            >
+              <span className="relative z-10">Descubrir Magia</span>
+              <div className="absolute inset-0 h-full w-0 bg-white/15 transition-all duration-300 ease-out group-hover:w-full z-0" />
             </a>
-            <a href="#servicios" className="reveal-btn group flex items-center gap-3 px-10 py-5 border border-gray-300 text-gray-900 font-bold uppercase tracking-widest text-sm transition-all hover:bg-gray-900 hover:text-white rounded-sm backdrop-blur-sm bg-white/50 hover:bg-gray-900/100">
-              <span>Nuestros Servicios</span>
+            <a
+              href="#servicios"
+              className="reveal-btn px-10 py-4 border border-[#0D0D0D]/20 text-[#0D0D0D] font-bold uppercase tracking-widest text-sm transition-all hover:border-[#BF1725] hover:text-[#BF1725] rounded-sm"
+            >
+              Nuestros Servicios
             </a>
           </div>
         </div>
+
+        {/* — RIGHT: car image — */}
+        <div className="bg-image relative flex items-center justify-center">
+          <Image
+            src="/hero-nissan.png"
+            alt="Vehículo restaurado por Importcampos"
+            width={900}
+            height={600}
+            className="w-full h-auto object-contain"
+            style={{ mixBlendMode: "multiply" }}
+            priority
+          />
+        </div>
+
       </div>
+
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-[#BF1725]/40 via-[#BF1725]/10 to-transparent" />
     </section>
   );
 }
