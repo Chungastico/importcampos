@@ -46,6 +46,7 @@ export default function HeroSection() {
 
   return (
     <section
+      id="inicio"
       ref={container}
       className="relative min-h-screen w-full flex items-center overflow-hidden bg-[#F2F2F2]"
     >

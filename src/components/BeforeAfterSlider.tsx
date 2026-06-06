@@ -59,7 +59,7 @@ export default function BeforeAfterSlider({
         {/* After (full width background) */}
         <img
           src={afterSrc}
-          alt={afterLabel}
+          alt={`${title} — ${afterLabel}`}
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
         />
@@ -71,7 +71,7 @@ export default function BeforeAfterSlider({
         >
           <img
             src={beforeSrc}
-            alt={beforeLabel}
+            alt={`${title} — ${beforeLabel}`}
             className="absolute inset-0 w-full h-full object-cover"
             style={{ width: `${(100 / position) * 100}%`, maxWidth: "none" }}
             draggable={false}

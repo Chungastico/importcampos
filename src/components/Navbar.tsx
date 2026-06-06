@@ -5,10 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 const links = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#transformaciones", label: "Transformaciones" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#inicio", label: "Inicio" },
+  { href: "/importaciones", label: "Importaciones" },
+  { href: "/#transformaciones", label: "Transformaciones" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -43,7 +44,7 @@ export default function Navbar() {
         </ul>
 
         <Link
-          href="#contacto"
+          href="/#contacto"
           className="hidden md:inline-flex items-center px-6 py-2.5 bg-[#BF1725] text-white text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-[#a0131e] transition-colors shadow-sm"
         >
           Cotizar
@@ -77,7 +78,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contacto"
+            href="/#contacto"
             onClick={() => setOpen(false)}
             className="inline-flex items-center justify-center px-5 py-3 bg-[#BF1725] text-white text-sm font-bold uppercase tracking-wider rounded-sm mt-2"
           >
