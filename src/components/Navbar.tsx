@@ -9,9 +9,6 @@ const links = [
   { href: "/importaciones", label: "Importaciones" },
   { href: "/reparacion", label: "Reparación" },
   { href: "/pintura", label: "Pintura" },
-  { href: "/#transformaciones", label: "Transformaciones" },
-  { href: "/#servicios", label: "Servicios" },
-  { href: "/#contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
